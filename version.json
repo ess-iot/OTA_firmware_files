@@ -1,5 +1,5 @@
 {
     "version": "1.1",
-    "firmware_url": "https://<your-username>.github.io/pico-ota/new_firmware.py",
+    "firmware_url": "https://ess-iot.github.io/pico-ota/firmware.py",
     "compatible_model": "RP2040"
 }
