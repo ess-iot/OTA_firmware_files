@@ -10,5 +10,6 @@ def main():
 
     # Run main application (LED blinking)
     print("hello main.py\n")
+    print("NEW main\n")
 
 main()
