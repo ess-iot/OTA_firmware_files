@@ -10,9 +10,4 @@ led = machine.Pin('LED', machine.Pin.OUT)
 while True:
     led.toggle()  # Toggle the LED state
     time.sleep(0.6)  # Wait for 1 second
-    if ota.check_for_updates():
-        print("Update available!")
-        update_firmware.auto_update()
-    else:
-        print("Not available.")
-
+    
