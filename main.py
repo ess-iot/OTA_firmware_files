@@ -1,12 +1,11 @@
 import machine
-import utime
- 
+import time
+
+# Configure the LED pin (built-in LED is on GPIO 25)
 led = machine.Pin('LED', machine.Pin.OUT)
+
+# Toggle the LED
 while True:
-    led.value(1)
-    utime.sleep(1)
-    led.value(0)
-    utime.sleep(0)
-
-
+    led.toggle()  # Toggle the LED state
+    time.sleep(0.6)  # Wait for 1 second
 
