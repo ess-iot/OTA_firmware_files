@@ -2,6 +2,8 @@ import machine
 import time
 import ota
 import update_firmware
+from ota import OTAUpdater
+from WIFI_CONFIG import SSID, PASSWORD
 
 def firmware_updates():
     firmware_url = "https://raw.githubusercontent.com/ess-iot/OTA_firmware_files/"
