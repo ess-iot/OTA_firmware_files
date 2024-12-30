@@ -303,5 +303,3 @@ def read_and_publish_energy_gps_data(address):
         
 address = 1  # Address of the Modbus RTU device
 read_and_publish_energy_gps_data(address)
-
-
