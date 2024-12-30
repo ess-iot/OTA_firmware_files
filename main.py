@@ -294,6 +294,8 @@ def read_and_publish_energy_gps_data(address):
                 
             if ota_updater.check_for_updates():
                 ota_updater.download_and_install_update_if_available()
+            else
+                print("No updates available.")
                     
         except Exception as e:
             print("Error:", e)
