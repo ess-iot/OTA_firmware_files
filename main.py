@@ -5,10 +5,9 @@ import update_firmware
 from ota import OTAUpdater
 from WIFI_CONFIG import SSID, PASSWORD
 
-def firmware_updates():
-    firmware_url = "https://raw.githubusercontent.com/ess-iot/OTA_firmware_files/"
-    ota_updater = OTAUpdater(SSID, PASSWORD, firmware_url, "main.py")
-    ota_updater.connect_wifi()
+firmware_url = "https://raw.githubusercontent.com/ess-iot/OTA_firmware_files/"
+ota_updater = OTAUpdater(SSID, PASSWORD, firmware_url, "main.py")
+ota_updater.connect_wifi()
     
 # Configure the LED pin (built-in LED is on GPIO 25)
 led = machine.Pin('LED', machine.Pin.OUT)
