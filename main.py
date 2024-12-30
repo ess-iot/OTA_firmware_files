@@ -7,6 +7,8 @@ import ujson
 import math
 import utime
 import gc
+from ota import OTAUpdater
+from WIFI_CONFIG import SSID, PASSWORD
 
 #Set machine frequency
 machine.freq(96_000_000)
