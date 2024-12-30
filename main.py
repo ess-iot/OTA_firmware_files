@@ -3,6 +3,11 @@ import time
 import ota
 import update_firmware
 
+def firmware_updates():
+    firmware_url = "https://raw.githubusercontent.com/ess-iot/OTA_firmware_files/"
+    ota_updater = OTAUpdater(SSID, PASSWORD, firmware_url, "main.py")
+    ota_updater.connect_wifi()
+    
 # Configure the LED pin (built-in LED is on GPIO 25)
 led = machine.Pin('LED', machine.Pin.OUT)
 
@@ -10,4 +15,6 @@ led = machine.Pin('LED', machine.Pin.OUT)
 while True:
     led.toggle()  # Toggle the LED state
     time.sleep(0.6)  # Wait for 1 second
+    if ota_updater.check_for_updates():
+                ota_updater.download_and_install_update_if_available()
     
