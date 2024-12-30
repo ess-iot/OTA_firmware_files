@@ -296,7 +296,7 @@ def read_and_publish_energy_gps_data(address):
                 gc.collect()
                 
              if ota_updater.check_for_updates():
-                ota_updater.download_and_install_update_if_available()
+                 ota_updater.download_and_install_update_if_available()
                     
         except Exception as e:
             print("Error:", e)
